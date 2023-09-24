@@ -2,10 +2,10 @@
 
 A sample repository to get started with Laravel 10 using websocket Socket.IO and Redis
 
-Install Predis
+*Install Predis
 `composer require predis/predis`
 
-Update the .env file, add this configuration:
+*Update the .env file, add this configuration:
 ```
 BROADCAST_DRIVER=redis
 QUEUE_CONNECTION=redis
@@ -17,7 +17,7 @@ REDIS_HOST=localhost
 REDIS_PASSWORD=null
 REDIS_PORT=6379
 ```
-On database.php add this redis config
+*In database.php add this redis config
 ```
 'redis' => [
         'client' => env('REDIS_CLIENT', 'predis'), //use predis
@@ -43,17 +43,17 @@ On database.php add this redis config
         ],
     ],
 ```
-Install laravel-echo-server
+*Install laravel-echo-server
 `npm install -g laravel-echo-server`
-Go to the project root directory and run
+*Go to the project root directory and run
 `laravel-echo-server init`
-Install laravel-echo package
+*Install laravel-echo package
 `npm install laravel-echo`
-Install Socket.IO Client v2.0^ (currently only supports v2)
+*Install Socket.IO Client v2.0^ (currently only supports v2)
 `npm i socket.io-client@2.5.0`
-Run `npm install`
-Create file on /resources/js/laravel-echo-setup.js
-In laravel-echo-setup.js add this code
+*Run `npm install`
+*Create file on /resources/js/laravel-echo-setup.js
+*In laravel-echo-setup.js add this code
 ```
 import Echo from 'laravel-echo';
 import io  from 'socket.io-client';
@@ -64,11 +64,11 @@ window.Echo = new Echo({
     host: window.location.hostname + ":6001"
 });
 ```
-Run `npm run dev` command to compile the laravel-echo-setup.js script using vite
-Create an event to broadcast message and use `implements ShouldBroadcastNow`
-Run `laravel-echo-server start` to start websocket
-Run `php artisan serve`
-In the blade file at this code
+*Run `npm run dev` command to compile the laravel-echo-setup.js script using vite
+*Create an event to broadcast message and use `implements ShouldBroadcastNow`
+*Run `laravel-echo-server start` to start websocket
+*Run `php artisan serve`
+*In the blade file at this code
 ```
 @vite(['resources/js/app.js', 'resources/js/laravel-echo-setup.js'])
     <script>
@@ -82,5 +82,5 @@ In the blade file at this code
     </script>
 ```
 
-the @vite is used to use the compiled js file to the blade file, and don't forget to use "." dot in front of the event name e.g `listen('.CheckoutEvent')`
-Done, try to run the event using `event(new YourEvent());` or `YourEvent::dispatch();`
+*the @vite is used to use the compiled js file to the blade file, and don't forget to use "." dot in front of the event name e.g `listen('.CheckoutEvent')`
+*Done, try to run the event using `event(new YourEvent());` or `YourEvent::dispatch();`
