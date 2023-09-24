@@ -2,10 +2,10 @@
 
 A sample repository to get started with Laravel 10 using websocket Socket.IO and Redis
 
-*Install Predis
+* Install Predis
 `composer require predis/predis`
 
-*Update the .env file, add this configuration:
+* Update the .env file, add this configuration:
 ```
 BROADCAST_DRIVER=redis
 QUEUE_CONNECTION=redis
@@ -17,7 +17,7 @@ REDIS_HOST=localhost
 REDIS_PASSWORD=null
 REDIS_PORT=6379
 ```
-*In database.php add this redis config
+* In database.php add this redis config
 ```
 'redis' => [
         'client' => env('REDIS_CLIENT', 'predis'), //use predis
