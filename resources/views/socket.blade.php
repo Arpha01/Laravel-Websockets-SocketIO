@@ -8,7 +8,7 @@
 </head>
 <body>
     TESTING SOCKET
-    <p id="test"></p>
+    <p id="test"></p> 
     @vite(['resources/js/app.js', 'resources/js/laravel-echo-setup.js'])
     <script>
        window.onload = function() {
