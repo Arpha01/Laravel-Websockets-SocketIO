@@ -52,7 +52,7 @@ REDIS_PORT=6379
 * Install laravel-echo package
 `npm install laravel-echo`
 
-*Install Socket.IO Client v2.0^ (currently only supports v2)
+* Install Socket.IO Client v2.0^ (currently only supports v2)
 `npm i socket.io-client@2.5.0`
 
 * Run `npm install`
