@@ -78,7 +78,7 @@ window.Echo = new Echo({
   
 * Run `php artisan serve`
   
-* In the blade file at this code
+* In the blade file add this code
 ```
 @vite(['resources/js/app.js', 'resources/js/laravel-echo-setup.js'])
     <script>
