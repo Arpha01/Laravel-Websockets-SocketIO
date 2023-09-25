@@ -85,8 +85,6 @@ window.Echo = new Echo({
        window.onload = function() {
           window.Echo.channel('order').listen('.NewOrder', (data) => {
             console.log(data);
-            const pElement = document.querySelector('#test');
-            pElement.value = data;
           })
        }
     </script>
