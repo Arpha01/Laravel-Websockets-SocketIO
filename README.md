@@ -10,9 +10,6 @@ A sample repository to get started with Laravel 10 using websocket Socket.IO and
 BROADCAST_DRIVER=redis
 QUEUE_CONNECTION=redis
 QUEUE_DRIVER=redis
-DB_DATABASE=blog_chat
-DB_USERNAME=root
-DB_PASSWORD=root
 REDIS_HOST=localhost
 REDIS_PASSWORD=null
 REDIS_PORT=6379
